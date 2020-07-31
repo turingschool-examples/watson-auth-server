@@ -28,6 +28,8 @@ A server for students to run locally in order to use the IBM Watson Tone Analyze
 
 ## Endpoint
 
+To use the server, your FE app will make requests to this endpoint:
+
 | Method | Endpoint                         | Sample Request                                               | Sample Response                                              |
 | ------ | -------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | GET    | http://localhost:5000/tone/:text | http://localhost:5000/tone/oh%20my%20gosh,%20this%20is%20so%20cool!%20I%20can't%20believe%20it's%20working! | {"document_tone":{"tones":[{"score":0.654847,"tone_id":"joy","tone_name":"Joy"},{"score":0.966403,"tone_id":"tentative","tone_name":"Tentative"}]},"sentences_tone":[{"sentence_id":0,"text":"oh my gosh, this is so cool!","tones":[{"score":0.70421,"tone_id":"joy","tone_name":"Joy"}]},{"sentence_id":1,"text":"I can't believe it's working!","tones":[{"score":0.968123,"tone_id":"tentative","tone_name":"Tentative"}]}]} |
